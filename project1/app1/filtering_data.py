@@ -3,7 +3,7 @@ import numpy as np
 
 # ingre_str 는 필터할 단어들
 # ingre_str = '-쌀,-금,-새우,-버섯,-멸치,감자,고구마,안심,마늘,계란,콩'
-def get_filtering_data(ingre_str):
+def filtering_data(ingre_str):
     ingre_list = ingre_str.split(',')
 
     # 못먹는 재료, 먹는 재료 리스트
