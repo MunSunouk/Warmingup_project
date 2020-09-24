@@ -60,6 +60,7 @@ def get_filtering_df(data_info, data_igd, data_process, idx):
 
 
 
+
 data = pd.read_csv('./레시피_재료정보.csv', encoding='cp949')
 
 ingre_str = '-쌀,-금,-새우,-버섯,-멸치,감자,고구마,안심,마늘,계란,콩'
@@ -80,9 +81,11 @@ for i in ingre_list:
 
 # noeat_filter(data, noeat_list)
 idx = have_filter(noeat_filter(data, noeat_list), have_list)
+
 df_info = pd.read_csv('./레시피_기본정보.csv', encoding='cp949')
 df_igd = pd.read_csv('./레시피_재료정보.csv', encoding='cp949')
 df_process = pd.read_csv('./레시피_과정정보.csv', encoding='cp949')
+
 
 a, b, c = get_filtering_df(df_info, df_igd, df_process, idx)
 print(a)

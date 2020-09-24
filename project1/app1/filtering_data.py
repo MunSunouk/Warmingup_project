@@ -16,7 +16,9 @@ def filtering_data(ingre_str):
         else:
             have_list.append(i)
 
+
     noeat_data = pd.read_csv('./레시피_재료정보.csv', encoding='cp949')
+
     
     idx_list=[]
     for i in noeat_list:
@@ -36,9 +38,11 @@ def filtering_data(ingre_str):
     idx = idx.tolist()
 
     # 경로 설정을 해줘야 한다. 중요.....
+
     df_info = pd.read_csv('./레시피_기본정보.csv', encoding='cp949')
     df_igd = pd.read_csv('./레시피_재료정보.csv', encoding='cp949')
     df_process = pd.read_csv('./레시피_과정정보.csv', encoding='cp949')
+
 
     have_info_list = []
     have_igd_list = []
@@ -55,9 +59,3 @@ def filtering_data(ingre_str):
 
     return have_info, have_igd, have_process
 
-
-ingre_str = '-쌀,-금,-새우,-버섯,-멸치,감자,고구마,안심,마늘,계란,콩'
-a, b, c = filtering_data(ingre_str)
-print(a)
-print(b)
-print(c)
